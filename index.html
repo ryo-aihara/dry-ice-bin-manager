@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>dry-ice-bin-manager</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="top">
+  <div class="row">
+    <div class="pillGroup">
+      <button id="bin1" class="pill active">1便</button>
+      <button id="bin2" class="pill">2便</button>
+    </div>
+
+    <div class="pillGroup">
+      <button id="base30" class="pill active">1〆=30</button>
+      <button id="base25" class="pill">25期</button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<section class="card panel">
+<h2>CSV貼り付け</h2>
+<textarea id="csvInput" placeholder="shime_size,30
+course,bin,shime,cut"></textarea>
+<button id="btnLoad">読み込み</button>
+</section>
+
+<section class="card panel">
+<h2>未振り分け</h2>
+<div id="unassigned"></div>
+</section>
+
+<section class="card panel">
+<h2>合計</h2>
+<div class="summary">
+  <div>総〆：<b id="sumShime">0</b></div>
+  <div>総cut：<b id="sumCut">0</b></div>
+  <div>総個数：<b id="sumPieces">0</b></div>
+  <div>ケース換算：<b id="sumCases">0</b></div>
+  <hr/>
+  <div>蓄冷：<b id="coolantTotal">0</b>枚</div>
+  <div>クールキャリア：<b id="coolantCases">0</b>ケース</div>
+  <div>バラ：<b id="coolantLoose">0</b>枚</div>
+</div>
+</section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
